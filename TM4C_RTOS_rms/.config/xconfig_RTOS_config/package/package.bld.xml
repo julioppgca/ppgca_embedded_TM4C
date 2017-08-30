@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="windows-1252"?>
 <!--  This file conforms to the DTD xdc/bld/build.dtd -->
 <package name="xconfig_RTOS_config" version="" producerId="undefined">
     <units>
@@ -7,7 +7,7 @@
         <srcFile name="package/cfg/RTOS_config_pem4f.c"/>
     </sources>
     <configscripts>
-        <srcFile name="/Users/juliosantos/Embedded2_ppgca/TM4C_RTOS_Template/RTOS_config.cfg"/>
+        <srcFile name="C:/Users/skelter_win/embedded2/ppgca_embedded_TM4C/TM4C_RTOS_rms/RTOS_config.cfg"/>
     </configscripts>
     <makefiles>
         <srcFile name="package.mak" src="package.bld"/>
@@ -20,12 +20,12 @@
     </makefiles>
     <targets>
         <target name="ti.targets.arm.elf.M4F"
-            version="ti.targets.arm.elf.M4F{1,0,16.9,0"
-            rawVersion="16.9.0"
+            version="ti.targets.arm.elf.M4F{1,0,16.9,3"
+            rawVersion="16.9.3"
             platform="ti.platforms.tiva:TM4C1294NCPDT:1"
             isa="v7M4"
             suffix="em4f"
-            rootDir="/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS"
+            rootDir="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS"
             os="undefined"
             rts="ti.targets.arm.rtsarm">
             <model endian="little"
@@ -44,7 +44,7 @@
         isPartial="false"
         xCfgScript="package/cfg/RTOS_config_pem4f.cfg"
         xCfgPrefix="package/cfg/RTOS_config_pem4f"
-        cfgScript="/Users/juliosantos/Embedded2_ppgca/TM4C_RTOS_Template/RTOS_config.cfg"
+        cfgScript="C:/Users/skelter_win/embedded2/ppgca_embedded_TM4C/TM4C_RTOS_rms/RTOS_config.cfg"
         cfgArgs="null"
         />
     </configurations>
@@ -56,7 +56,7 @@
         profile="release"
         xCfgScript="package/cfg/RTOS_config_pem4f.cfg"
         xCfgPrefix="package/cfg/RTOS_config_pem4f"
-        cfgScript="/Users/juliosantos/Embedded2_ppgca/TM4C_RTOS_Template/RTOS_config.cfg"
+        cfgScript="C:/Users/skelter_win/embedded2/ppgca_embedded_TM4C/TM4C_RTOS_rms/RTOS_config.cfg"
         cfgArgs="null"
         />
     </executables>

@@ -1,10 +1,10 @@
 ******************************************************************************
-                  TI ARM Linker Unix v16.9.0                   
+                  TI ARM Linker PC v16.9.3                     
 ******************************************************************************
->> Linked Fri Aug 25 00:48:51 2017
+>> Linked Tue Aug 29 17:01:51 2017
 
 OUTPUT FILE NAME:   <TM4C_RTOS_Template.out>
-ENTRY POINT SYMBOL: "_c_int00"  address: 0000dad5
+ENTRY POINT SYMBOL: "_c_int00"  address: 0000d975
 
 
 MEMORY CONFIGURATION
@@ -332,11 +332,11 @@ section   page    origin      length       input sections
                   0000d8c0    0000005a     RTOS_config_pem4f.oem4f (.text:ti_ndk_config_tcp_init)
                   0000d91a    00000002     --HOLE-- [fill = 0]
                   0000d91c    00000058     stk.aem4f : bind.oem4f (.text:BindFree)
-                  0000d974    00000058     driverlib.lib : emac.obj (.text:EMACPHYConfigSet)
-                  0000d9cc    00000058     stk.aem4f : igmp.oem4f (.text:IGMPTimer)
-                  0000da24    00000058     os.aem4f : semaphore.oem4f (.text:SemCreate)
-                  0000da7c    00000058     driverlib.lib : timer.obj (.text:TimerControlTrigger)
-                  0000dad4    00000058     boot.aem4f : boot.oem4f (.text)
+                  0000d974    00000058     boot.aem4f : boot.oem4f (.text)
+                  0000d9cc    00000058     driverlib.lib : emac.obj (.text:EMACPHYConfigSet)
+                  0000da24    00000058     stk.aem4f : igmp.oem4f (.text:IGMPTimer)
+                  0000da7c    00000058     os.aem4f : semaphore.oem4f (.text:SemCreate)
+                  0000dad4    00000058     driverlib.lib : timer.obj (.text:TimerControlTrigger)
                   0000db2c    00000058     sysbios.aem4f : m3_Hwi_asm_switch.obj (.text:ti_sysbios_family_arm_m3_Hwi_initStacks__E)
                   0000db84    00000056     driverlib.lib : gpio.obj (.text:GPIOIntTypeSet)
                   0000dbda    00000002     --HOLE-- [fill = 0]
@@ -1011,6 +1011,9 @@ section   page    origin      length       input sections
 *          0    00000000    0000003c     
                   00000000    0000003c     RTOS_config_pem4f.oem4f (.resetVecs)
 
+.vecs      0    20000000    00000360     UNINITIALIZED
+                  20000000    00000360     RTOS_config_pem4f.oem4f (.vecs)
+
 .bss       0    20000400    00011e2c     UNINITIALIZED
                   20000400    00005000     (.common:ti_sysbios_heaps_HeapMem_Instance_State_0_buf__A)
                   20005400    000048a8     RTOS_config_pem4f.oem4f (.bss:NDK_MMBUFFER)
@@ -1169,34 +1172,58 @@ section   page    origin      length       input sections
 *          0    00000000    00000008     DSECT
                   00000000    00000008     boot.aem4f : boot.oem4f (.bootVecs)
 
-.vecs      0    20000000    00000360     UNINITIALIZED
-                  20000000    00000360     RTOS_config_pem4f.oem4f (.vecs)
-
-xdc.meta   0    00000000    000000f4     COPY SECTION
-                  00000000    000000f4     RTOS_config_pem4f.oem4f (xdc.meta)
+xdc.meta   0    00000000    00000104     COPY SECTION
+                  00000000    00000104     RTOS_config_pem4f.oem4f (xdc.meta)
 
 MODULE SUMMARY
 
        Module                     code    ro data   rw data
        ------                     ----    -------   -------
-    ./
+    .\
        main.obj                   96      0         0      
     +--+--------------------------+-------+---------+---------+
        Total:                     96      0         0      
                                                            
-    ./project_includes/
+    .\project_includes\
        adc_sample.obj             1060    0         12288  
        eth_network.obj            1008    0         0      
        EK_TM4C1294XL.obj          492     60        46     
     +--+--------------------------+-------+---------+---------+
        Total:                     2560    60        12334  
                                                            
-    /Users/juliosantos/Embedded2_ppgca/TM4C_RTOS_Template/Debug/configPkg/package/cfg/
+    C:\Users\skelter_win\embedded2\ppgca_embedded_TM4C\TM4C_RTOS_Template\Debug\configPkg\package\cfg\
        RTOS_config_pem4f.oem4f    2851    8295      60924  
     +--+--------------------------+-------+---------+---------+
        Total:                     2851    8295      60924  
                                                            
-    /Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/lib/rtsv7M4_T_le_v4SPD16_eabi.lib
+    C:/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/driverlib/ccs/Debug/driverlib.lib
+       sysctl.obj                 810     452       0      
+       emac.obj                   756     24        0      
+       gpio.obj                   566     144       0      
+       udma.obj                   464     0         0      
+       adc.obj                    294     0         0      
+       timer.obj                  220     0         0      
+       interrupt.obj              104     112       0      
+       flash.obj                  20      0         0      
+    +--+--------------------------+-------+---------+---------+
+       Total:                     3234    732       0      
+                                                           
+    C:/ti/tirtos_tivac_2_16_00_08/products/tidrivers_tivac_2_16_00_08/packages/ti/drivers/lib/drivers_tivaware.aem4f
+       EMACSnow.oem4f             2006    8         406    
+       GPIOTiva.oem4f             684     156       153    
+       EMAC.oem4f                 52      0         4      
+    +--+--------------------------+-------+---------+---------+
+       Total:                     2742    164       563    
+                                                           
+    C:\Users\skelter_win\embedded2\ppgca_embedded_TM4C\TM4C_RTOS_Template\src\sysbios\sysbios.aem4f
+       BIOS.obj                   10102   0         0      
+       m3_Hwi_asm.obj             314     0         0      
+       m3_TaskSupport_asm.obj     180     0         0      
+       m3_Hwi_asm_switch.obj      118     0         0      
+    +--+--------------------------+-------+---------+---------+
+       Total:                     10714   0         0      
+                                                           
+    C:\ti\ccsv7\tools\compiler\ti-cgt-arm_16.9.3.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
        trgdrv.obj                 804     0         8      
        trgmsg.obj                 104     0         288    
        memcpy_t2.obj              156     0         0      
@@ -1217,43 +1244,23 @@ MODULE SUMMARY
     +--+--------------------------+-------+---------+---------+
        Total:                     1650    0         320    
                                                            
-    /Users/juliosantos/Embedded2_ppgca/TM4C_RTOS_Template/src/sysbios/sysbios.aem4f
-       BIOS.obj                   10102   0         0      
-       m3_Hwi_asm.obj             314     0         0      
-       m3_TaskSupport_asm.obj     180     0         0      
-       m3_Hwi_asm_switch.obj      118     0         0      
-    +--+--------------------------+-------+---------+---------+
-       Total:                     10714   0         0      
-                                                           
-    /Users/juliosantos/ti/tirex-content/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/driverlib/ccs/Debug/driverlib.lib
-       sysctl.obj                 810     452       0      
-       emac.obj                   756     24        0      
-       gpio.obj                   566     144       0      
-       udma.obj                   464     0         0      
-       adc.obj                    294     0         0      
-       timer.obj                  220     0         0      
-       interrupt.obj              104     112       0      
-       flash.obj                  20      0         0      
-    +--+--------------------------+-------+---------+---------+
-       Total:                     3234    732       0      
-                                                           
-    /Users/juliosantos/ti/tirex-content/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/catalog/arm/cortexm4/tiva/ce/lib/Boot.aem4f
+    C:\ti\tirtos_tivac_2_16_00_08\products\bios_6_45_01_29\packages\ti\catalog\arm\cortexm4\tiva\ce\lib\Boot.aem4f
        Boot_sysctl.oem4f          628     452       0      
        Boot.oem4f                 152     0         0      
     +--+--------------------------+-------+---------+---------+
        Total:                     780     452       0      
                                                            
-    /Users/juliosantos/ti/tirex-content/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/targets/arm/rtsarm/lib/auto_init.aem4f
+    C:\ti\tirtos_tivac_2_16_00_08\products\bios_6_45_01_29\packages\ti\targets\arm\rtsarm\lib\auto_init.aem4f
        auto_init.oem4f            160     0         0      
     +--+--------------------------+-------+---------+---------+
        Total:                     160     0         0      
                                                            
-    /Users/juliosantos/ti/tirex-content/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/targets/arm/rtsarm/lib/boot.aem4f
+    C:\ti\tirtos_tivac_2_16_00_08\products\bios_6_45_01_29\packages\ti\targets\arm\rtsarm\lib\boot.aem4f
        boot.oem4f                 88      0         0      
     +--+--------------------------+-------+---------+---------+
        Total:                     88      0         0      
                                                            
-    /Users/juliosantos/ti/tirex-content/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/targets/arm/rtsarm/lib/ti.targets.arm.rtsarm.aem4f
+    C:\ti\tirtos_tivac_2_16_00_08\products\bios_6_45_01_29\packages\ti\targets\arm\rtsarm\lib\ti.targets.arm.rtsarm.aem4f
        System.oem4f               1277    0         0      
        Text.oem4f                 672     0         0      
        Error.oem4f                528     0         0      
@@ -1271,28 +1278,28 @@ MODULE SUMMARY
     +--+--------------------------+-------+---------+---------+
        Total:                     4063    0         0      
                                                            
-    /Users/juliosantos/ti/tirex-content/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/hal/ser_stub/lib/hal_ser_stub.aem4f
+    C:\ti\tirtos_tivac_2_16_00_08\products\ndk_2_25_00_09\packages\ti\ndk\hal\ser_stub\lib\hal_ser_stub.aem4f
        llserstb.oem4f             10      0         0      
     +--+--------------------------+-------+---------+---------+
        Total:                     10      0         0      
                                                            
-    /Users/juliosantos/ti/tirex-content/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/hal/timer_bios/lib/hal_timer_bios.aem4f
+    C:\ti\tirtos_tivac_2_16_00_08\products\ndk_2_25_00_09\packages\ti\ndk\hal\timer_bios\lib\hal_timer_bios.aem4f
        lltimer.oem4f              252     0         28     
     +--+--------------------------+-------+---------+---------+
        Total:                     252     0         28     
                                                            
-    /Users/juliosantos/ti/tirex-content/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/hal/userled_stub/lib/hal_userled_stub.aem4f
+    C:\ti\tirtos_tivac_2_16_00_08\products\ndk_2_25_00_09\packages\ti\ndk\hal\userled_stub\lib\hal_userled_stub.aem4f
        llled.oem4f                6       0         0      
     +--+--------------------------+-------+---------+---------+
        Total:                     6       0         0      
                                                            
-    /Users/juliosantos/ti/tirex-content/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/netctrl/lib/netctrl_min_ipv4.aem4f
+    C:\ti\tirtos_tivac_2_16_00_08\products\ndk_2_25_00_09\packages\ti\ndk\netctrl\lib\netctrl_min_ipv4.aem4f
        netsrv.oem4f               1122    0         352    
        netctrl.oem4f              884     0         60     
     +--+--------------------------+-------+---------+---------+
        Total:                     2006    0         412    
                                                            
-    /Users/juliosantos/ti/tirex-content/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/nettools/lib/nettool_ipv4.aem4f
+    C:\ti\tirtos_tivac_2_16_00_08\products\ndk_2_25_00_09\packages\ti\ndk\nettools\lib\nettool_ipv4.aem4f
        config.oem4f               1760    0         4      
        dhcpsm.oem4f               1028    0         0      
        dhcpbild.oem4f             508     0         0      
@@ -1305,7 +1312,7 @@ MODULE SUMMARY
     +--+--------------------------+-------+---------+---------+
        Total:                     5226    0         85     
                                                            
-    /Users/juliosantos/ti/tirex-content/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/os/lib/os.aem4f
+    C:\ti\tirtos_tivac_2_16_00_08\products\ndk_2_25_00_09\packages\ti\ndk\os\lib\os.aem4f
        mem.oem4f                  1312    0         148    
        task.oem4f                 1054    0         24     
        semaphore.oem4f            226     0         0      
@@ -1313,7 +1320,7 @@ MODULE SUMMARY
     +--+--------------------------+-------+---------+---------+
        Total:                     2732    0         208    
                                                            
-    /Users/juliosantos/ti/tirex-content/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/stack/lib/stk.aem4f
+    C:\ti\tirtos_tivac_2_16_00_08\products\ndk_2_25_00_09\packages\ti\ndk\stack\lib\stk.aem4f
        tcpin.oem4f                3312    0         0      
        sock.oem4f                 3010    0         0      
        tcpout.oem4f               2608    0         11     
@@ -1358,13 +1365,6 @@ MODULE SUMMARY
        nat.oem4f                  2       0         0      
     +--+--------------------------+-------+---------+---------+
        Total:                     34019   146       1485   
-                                                           
-    /Users/juliosantos/ti/tirex-content/tirtos_tivac_2_16_00_08/products/tidrivers_tivac_2_16_00_08/packages/ti/drivers/lib/drivers_tivaware.aem4f
-       EMACSnow.oem4f             2006    8         406    
-       GPIOTiva.oem4f             684     156       153    
-       EMAC.oem4f                 52      0         4      
-    +--+--------------------------+-------+---------+---------+
-       Total:                     2742    164       563    
                                                            
        Stack:                     0       0         2048   
        Linker Generated:          0       974       0      
@@ -1458,7 +1458,7 @@ address   name
 0000f451  EMACIntDisable                                                       
 0000f6ed  EMACIntEnable                                                        
 000103b7  EMACIntStatus                                                        
-0000d975  EMACPHYConfigSet                                                     
+0000d9cd  EMACPHYConfigSet                                                     
 000109a7  EMACPHYRead                                                          
 000109cd  EMACPHYWrite                                                         
 00011709  EMACReset                                                            
@@ -1655,7 +1655,7 @@ address   name
 00007d95  SBWrite                                                              
 UNDEFED   SHT$$INIT_ARRAY$$Base                                                
 UNDEFED   SHT$$INIT_ARRAY$$Limit                                               
-0000da25  SemCreate                                                            
+0000da7d  SemCreate                                                            
 0000bda9  SemCreateBinary                                                      
 00011c99  SemDelete                                                            
 000093ad  SemPend                                                              
@@ -1738,7 +1738,7 @@ UNDEFED   SHT$$INIT_ARRAY$$Limit
 0000b90d  TcpXmitTimer                                                         
 0000a25d  TimerADCEventSet                                                     
 0000d239  TimerConfigure                                                       
-0000da7d  TimerControlTrigger                                                  
+0000dad5  TimerControlTrigger                                                  
 00011bf7  TimerEnable                                                          
 00011831  TimerFree                                                            
 0000f841  TimerHSTick                                                          
@@ -1774,11 +1774,11 @@ UNDEFED   SHT$$INIT_ARRAY$$Limit
 00009f67  _TaskShutdown                                                        
 00000000  __ASM__                                                              
 20011960  __CIOBUF_                                                            
-00000072  __ISA__                                                              
-00000085  __PLAT__                                                             
+00000082  __ISA__                                                              
+00000095  __PLAT__                                                             
 200132ec  __STACK_END                                                          
 00000800  __STACK_SIZE                                                         
-000000a6  __TARG__                                                             
+000000b6  __TARG__                                                             
 000148b8  __TI_CINIT_Base                                                      
 000148d0  __TI_CINIT_Limit                                                     
 0001489c  __TI_Handler_Table_Base                                              
@@ -1796,7 +1796,7 @@ ffffffff  __TI_prof_data_start
 00014500  __TI_static_base__                                                   
 0000ca71  __TI_writemsg                                                        
 00011cbd  __TI_zero_init                                                       
-000000cc  __TRDR__                                                             
+000000dc  __TRDR__                                                             
 0000baeb  __aeabi_idiv0                                                        
 0000b7a1  __aeabi_memclr                                                       
 0000b7a1  __aeabi_memclr4                                                      
@@ -1815,7 +1815,7 @@ ffffffff  __c_args__
 00011e4f  __xdc__init                                                          
 2001291c  __xdc__init__addr                                                    
 00011601  _args_main                                                           
-0000dad5  _c_int00                                                             
+0000d975  _c_int00                                                             
 20012310  _ipcfg                                                               
 0000a4a5  _llSerialInit                                                        
 0000a90f  _llSerialServiceCheck                                                
@@ -2432,10 +2432,10 @@ address   name
 00000001  xdc_runtime_Startup__EXECFXN__C                                      
 00000001  xdc_runtime_Startup__RESETFXN__C                                     
 00000041  TcpInput                                                             
-00000072  __ISA__                                                              
-00000085  __PLAT__                                                             
-000000a6  __TARG__                                                             
-000000cc  __TRDR__                                                             
+00000082  __ISA__                                                              
+00000095  __PLAT__                                                             
+000000b6  __TARG__                                                             
+000000dc  __TRDR__                                                             
 00000800  __STACK_SIZE                                                         
 00000ca9  TcpOutput                                                            
 00001561  ti_sysbios_family_arm_m3_Hwi_excDumpRegs__I                          
@@ -2710,10 +2710,10 @@ address   name
 0000d867  mmCopy                                                               
 0000d8c1  ti_ndk_config_tcp_init                                               
 0000d91d  BindFree                                                             
-0000d975  EMACPHYConfigSet                                                     
-0000da25  SemCreate                                                            
-0000da7d  TimerControlTrigger                                                  
-0000dad5  _c_int00                                                             
+0000d975  _c_int00                                                             
+0000d9cd  EMACPHYConfigSet                                                     
+0000da7d  SemCreate                                                            
+0000dad5  TimerControlTrigger                                                  
 0000db2d  ti_sysbios_family_arm_m3_Hwi_initStacks__E                           
 0000db85  GPIOIntTypeSet                                                       
 0000dbdd  CfgEntryDeRef                                                        

@@ -3,7 +3,7 @@
 #  package.bld.  Any modifications to this file will be 
 #  overwritten whenever makefiles are re-generated.
 #
-#  target compatibility key = ti.targets.arm.elf.M4F{1,0,16.9,0
+#  target compatibility key = ti.targets.arm.elf.M4F{1,0,16.9,3
 #
 RTOS_config.xem4f: package/cfg/RTOS_config.xem4f.mak
 

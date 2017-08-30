@@ -11,7 +11,7 @@ var makeAssembly = false;
 var Executable = xdc.module('xdc.bld.Executable');
 
 var exeOpts = new Executable.Attrs({
-        cfgScript: '/Users/juliosantos/Embedded2_ppgca/TM4C_RTOS_Template/RTOS_config.cfg',
+        cfgScript: 'C:/Users/skelter_win/embedded2/ppgca_embedded_TM4C/TM4C_RTOS_rms/RTOS_config.cfg',
         profile: 'release',
         cfgHome: 'xconfig_RTOS_config',
 });
@@ -40,8 +40,8 @@ else {
 }
 
 var thisObj = {
-    cfg:        '/Users/juliosantos/Embedded2_ppgca/TM4C_RTOS_Template/RTOS_config.cfg',
-    outputPath: '/Users/juliosantos/Embedded2_ppgca/TM4C_RTOS_Template/.config/xconfig_RTOS_config',
+    cfg:        'C:/Users/skelter_win/embedded2/ppgca_embedded_TM4C/TM4C_RTOS_rms/RTOS_config.cfg',
+    outputPath: 'C:/Users/skelter_win/embedded2/ppgca_embedded_TM4C/TM4C_RTOS_rms/.config/xconfig_RTOS_config',
     exeName:    'RTOS_config' + suffix,
     exeIntName: 'RTOS_config' + suffix.replace('.', '_'),
     targ:       targ,

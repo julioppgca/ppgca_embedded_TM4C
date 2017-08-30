@@ -34,6 +34,9 @@
 #define CLK_FREQ                    120000000       // TM4C clock frequency
 #define ADC_OVERSAMPLE_VALUE        64              // Over sample value 2..64 (power of 2 steps)
 #define SAMPLE_FREQUENCY            60*512
+#define ADC_OFFSET                  2048
+#define ADC_SCALE                   3.3/4095
+
 
 void adcPinConifig(void);
 void TIMER_ADC_init(uint32_t sample_freq);
@@ -42,5 +45,6 @@ void DMA_init(void);
 void ADC_Seq0_ISR(void);     //Interrupt service of ADC Sequencer 0
 void ADC_Seq1_ISR(void);     //Interrupt service of ADC Sequencer 1
 
+extern uint16_t g_uint16_adc0_ping[];
 
 #endif // __SAMPLES_CONFIG_H__

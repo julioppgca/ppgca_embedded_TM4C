@@ -1,6 +1,6 @@
 #
 # This file was generated based on the configuration script:
-#     /Users/juliosantos/ppgca_embedded/TM4C_RTOS_rms/RTOS_config.cfg
+#     C:\Users\skelter_win\embedded2\ppgca_embedded_TM4C\TM4C_RTOS_rms\RTOS_config.cfg
 #
 # This makefile may be included in other makefiles that need to build
 # the libraries containing the compiled source files generated as
@@ -14,7 +14,7 @@
 #
 # The absolute path to the generated source directory (at the time the
 # sources were generated) is:
-#    /Users/juliosantos/ppgca_embedded/TM4C_RTOS_rms/src
+#    C:\Users\skelter_win\embedded2\ppgca_embedded_TM4C\TM4C_RTOS_rms\src
 #
 GEN_SRC_DIR ?= ../src
 

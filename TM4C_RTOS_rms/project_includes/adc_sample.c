@@ -307,7 +307,8 @@ void ADC_Seq0_ISR(void)
                                (void *) (ADC0_BASE + ADC_O_SSFIFO0),
                                g_uint16_adc0_ping,
                                DMA_BUFFER_SIZE);
-        Semaphore_post(s_adc0_pong_ready);
+        // free to process g_uint16_adc0_ping
+        Semaphore_post(s_adc0_ping_ready);
 
     }
     else if ((modePrimary != UDMA_MODE_STOP) && (modeAlternate == UDMA_MODE_STOP))
@@ -318,7 +319,8 @@ void ADC_Seq0_ISR(void)
                                (void *) (ADC0_BASE + ADC_O_SSFIFO0),
                                g_uint16_adc0_pong,
                                DMA_BUFFER_SIZE);
-
+        // free to process g_uint16_adc0_pong
+        Semaphore_post(s_adc0_pong_ready);
     }
 }
 
@@ -345,7 +347,7 @@ void ADC_Seq1_ISR(void)
                                (void *) (ADC1_BASE + ADC_O_SSFIFO0),
                                g_uint16_adc1_ping,
                                DMA_BUFFER_SIZE);
-
+        Semaphore_post(s_adc1_ping_ready);
     }
     else if ((modePrimary != UDMA_MODE_STOP) && (modeAlternate == UDMA_MODE_STOP))
     {
@@ -355,6 +357,6 @@ void ADC_Seq1_ISR(void)
                                (void *) (ADC1_BASE + ADC_O_SSFIFO0),
                                g_uint16_adc1_pong,
                                DMA_BUFFER_SIZE);
-
+        Semaphore_post(s_adc1_pong_ready);
     }
 }
