@@ -22,8 +22,10 @@
 /* math standard C library */
 #include <math.h>
 
-#define BREAK_POINT_VALUE   4   // Debug purpose only
+/* Debug breakpoint value */
+#define BREAK_POINT_VALUE   1   // Debug purpose only
 
+/* global variables */
 int32_t g_int32_ai0[2 * DMA_BUFFER_SIZE] = { };
 float rms_ai0 = 0;
 
@@ -47,6 +49,7 @@ int main(void)
     return (0);
 }
 
+/* initialize ADC/DMA data acquisition */
 void initSamplesTask(void)
 {
     DMA_init();
@@ -100,7 +103,7 @@ void heartBeat_Task(void)
 {
     while (1)
     {
-        GPIO_toggle(Board_LED0);
-        Task_sleep(500);
+        GPIO_toggle(Board_LED0);    // blink LED
+        Task_sleep(500);            // goto to sleep
     }
 }

@@ -10,6 +10,7 @@
 
 
 -l"C:\Users\skelter_win\embedded2\ppgca_embedded_TM4C\TM4C_RTOS_rms\Debug\configPkg\package\cfg\RTOS_config_pem4f.oem4f"
+-l"C:\ti\tirtos_tivac_2_16_00_08\products\uia_2_00_05_50\packages\ti\uia\sysbios\lib\release\ti.uia.sysbios.aem4f"
 -l"C:\ti\tirtos_tivac_2_16_00_08\products\ndk_2_25_00_09\packages\ti\ndk\hal\timer_bios\lib\hal_timer_bios.aem4f"
 -l"C:\ti\tirtos_tivac_2_16_00_08\products\ndk_2_25_00_09\packages\ti\ndk\os\lib\os.aem4f"
 -l"C:\ti\tirtos_tivac_2_16_00_08\products\ndk_2_25_00_09\packages\ti\ndk\hal\userled_stub\lib\hal_userled_stub.aem4f"
@@ -22,6 +23,7 @@
 -l"C:\ti\tirtos_tivac_2_16_00_08\products\ndk_2_25_00_09\packages\ti\ndk\hal\ser_stub\lib\hal_ser_stub.aem4f"
 -l"C:\ti\tirtos_tivac_2_16_00_08\products\ndk_2_25_00_09\packages\ti\ndk\tools\servers\lib\servers_min_ipv4.aem4f"
 -l"C:\ti\tirtos_tivac_2_16_00_08\products\ndk_2_25_00_09\packages\ti\ndk\stack\lib\stk.aem4f"
+-l"C:\ti\tirtos_tivac_2_16_00_08\products\uia_2_00_05_50\packages\ti\uia\loggers\lib\release\ti.uia.loggers.aem4f"
 -l"C:/ti/tirtos_tivac_2_16_00_08/products/tidrivers_tivac_2_16_00_08/packages/ti/mw/wifi/cc3x00/lib/cc3x00_host_driver.aem4f"
 -l"C:/ti/tirtos_tivac_2_16_00_08/products/tidrivers_tivac_2_16_00_08/packages/ti/drivers/lib/drivers_tivaware.aem4f"
 -l"C:/ti/tirtos_tivac_2_16_00_08/products/tidrivers_tivac_2_16_00_08/packages/ti/drivers/lib/drivers_wifi_tivaware.aem4f"
@@ -29,6 +31,9 @@
 -l"C:/ti/tirtos_tivac_2_16_00_08/products/tidrivers_tivac_2_16_00_08/packages/ti/drivers/ports/lib/tirtosport.aem4f"
 -l"C:\Users\skelter_win\embedded2\ppgca_embedded_TM4C\TM4C_RTOS_rms\src\sysbios\sysbios.aem4f"
 -l"C:\ti\tirtos_tivac_2_16_00_08\products\bios_6_45_01_29\packages\ti\catalog\arm\cortexm4\tiva\ce\lib\Boot.aem4f"
+-l"C:\ti\tirtos_tivac_2_16_00_08\products\uia_2_00_05_50\packages\ti\uia\services\lib\release\ti.uia.services.aem4f"
+-l"C:\ti\tirtos_tivac_2_16_00_08\products\uia_2_00_05_50\packages\ti\uia\runtime\lib\release\ti.uia.runtime.aem4f"
+-l"C:\ti\tirtos_tivac_2_16_00_08\products\uia_2_00_05_50\packages\ti\uia\events\lib\release\ti.uia.events.aem4f"
 -l"C:\ti\tirtos_tivac_2_16_00_08\products\bios_6_45_01_29\packages\ti\targets\arm\rtsarm\lib\ti.targets.arm.rtsarm.aem4f"
 -l"C:\ti\tirtos_tivac_2_16_00_08\products\bios_6_45_01_29\packages\ti\targets\arm\rtsarm\lib\boot.aem4f"
 -l"C:\ti\tirtos_tivac_2_16_00_08\products\bios_6_45_01_29\packages\ti\targets\arm\rtsarm\lib\auto_init.aem4f"
@@ -86,11 +91,17 @@
 /* Content from ti.sysbios.family.arm (ti/sysbios/family/arm/linkcmd.xdt): */
 --retain "*(.vecs)"
 
+/* Content from xdc.rta (null): */
+
+/* Content from ti.uia.events (null): */
+
+/* Content from ti.uia.runtime (null): */
+
+/* Content from xdc.runtime.knl (null): */
+
 /* Content from ti.ndk.rov (null): */
 
 /* Content from ti.sysbios.rts (ti/sysbios/rts/linkcmd.xdt): */
-
-/* Content from xdc.runtime.knl (null): */
 
 /* Content from ti.ndk (null): */
 
@@ -117,6 +128,8 @@
 /* Content from ti.ndk.hal.ser_stub (null): */
 
 /* Content from ti.ndk.tools.servers (null): */
+
+/* Content from ti.uia.services (null): */
 
 /* Content from ti.catalog.arm.peripherals.timers (null): */
 
@@ -148,7 +161,11 @@
 
 /* Content from ti.mw (null): */
 
+/* Content from ti.uia.loggers (null): */
+
 /* Content from ti.sysbios.hal (null): */
+
+/* Content from ti.sysbios.family.arm.lm4 (null): */
 
 /* Content from ti.sysbios.family.arm.m3 (ti/sysbios/family/arm/m3/linkcmd.xdt): */
 -u _c_int00
@@ -157,7 +174,7 @@ ti_sysbios_family_arm_m3_Hwi_nvic = 0xe000e000;
 
 /* Content from ti.sysbios.knl (null): */
 
-/* Content from ti.sysbios.family.arm.lm4 (null): */
+/* Content from ti.sysbios.syncs (null): */
 
 /* Content from ti.ndk.config (null): */
 
@@ -168,6 +185,8 @@ ti_sysbios_family_arm_m3_Hwi_nvic = 0xe000e000;
 /* Content from ti.sysbios.heaps (null): */
 
 /* Content from ti.sysbios.utils (null): */
+
+/* Content from ti.uia.sysbios (null): */
 
 /* Content from configPkg (null): */
 
