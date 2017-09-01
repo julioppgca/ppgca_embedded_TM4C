@@ -46,5 +46,6 @@ void ADC_Seq0_ISR(void);     //Interrupt service of ADC Sequencer 0
 void ADC_Seq1_ISR(void);     //Interrupt service of ADC Sequencer 1
 
 extern uint16_t g_uint16_adc0_ping[];
+extern uint16_t g_uint16_adc0_pong[];
 
 #endif // __SAMPLES_CONFIG_H__

@@ -83,7 +83,7 @@ void rmsCalc_Task(void)
         // process second part
         for (; i < 2 * DMA_BUFFER_SIZE; i++)
         {
-            g_int32_ai0[i] = (int16_t) g_uint16_adc0_ping[i] - ADC_OFFSET;
+            g_int32_ai0[i] = (int16_t) g_uint16_adc0_pong[i-DMA_BUFFER_SIZE] - ADC_OFFSET;
             g_int32_ai0[i] *= g_int32_ai0[i];
             rms += g_int32_ai0[i];
         }
