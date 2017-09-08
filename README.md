@@ -13,6 +13,10 @@ As soon as new examples become available, they will appear in the root directory
   Using Semaphores to manipulate inter threaded variables. 
   Calculating rms value from a sampled signal at 'ain0' channel.
   
+  ### TM4C_RTOS_CMSIS_DSP
+   Using arm CMSIS DSP libray with TM4C and TI-RTOS.
+   Calculating rms value and fft transform.
+  
 ## Sensor Data
  Please get your sensor calibration values from the link below:
  > https://tinyurl.com/SensorCalibrationTable
