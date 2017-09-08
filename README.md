@@ -14,7 +14,7 @@ As soon as new examples become available, they will appear in the root directory
   Calculating rms value from a sampled signal at 'ain0' channel.
   
   ### TM4C_RTOS_CMSIS_DSP
-   Using arm CMSIS DSP libray with TM4C and TI-RTOS.
+   Using arm CMSIS DSP library with TM4C and TI-RTOS.
    Calculating rms value and fft transform.
   
 ## Sensor Data
