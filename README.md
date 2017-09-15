@@ -21,4 +21,6 @@ As soon as new examples become available, they will appear in the root directory
  Please get your sensor calibration values from the link below:
  > https://tinyurl.com/SensorCalibrationTable
  
+  ### TM4C_RTOS_TCP_IP_SendReceive
+   Receive 'R' command from TCP/IP Socket and respond with AIN0 rms value.
  
