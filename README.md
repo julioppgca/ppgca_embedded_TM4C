@@ -16,11 +16,12 @@ As soon as new examples become available, they will appear in the root directory
   ### TM4C_RTOS_CMSIS_DSP
    Using arm CMSIS DSP library with TM4C and TI-RTOS.
    Calculating rms value and fft transform.
+   
+  ### TM4C_RTOS_TCP_IP_SendReceive
+   Receive 'R' command from TCP/IP Socket and respond with AIN0 rms value.
   
 ## Sensor Data
  Please get your sensor calibration values from the link below:
  > https://tinyurl.com/SensorCalibrationTable
- 
-  ### TM4C_RTOS_TCP_IP_SendReceive
-   Receive 'R' command from TCP/IP Socket and respond with AIN0 rms value.
+
  
