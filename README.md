@@ -19,6 +19,9 @@ As soon as new examples become available, they will appear in the root directory
    
   ### TM4C_RTOS_TCP_IP_SendReceive
    Receive 'R' command from TCP/IP Socket and respond with AIN0 rms value.
+   
+  ### TM4C_RTOS_Debug_Benchmark
+   Using task profiler and duration analysis. ROM based ethernet bootloader.
   
 ## Sensor Data
  Please get your sensor calibration values from the link below:
