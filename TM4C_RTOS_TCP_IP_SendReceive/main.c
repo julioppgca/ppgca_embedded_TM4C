@@ -112,10 +112,6 @@ void signalProcessing_Task(void)
         Semaphore_pend(s_critical_section, BIOS_WAIT_FOREVER);
             sprintf(g_str_SendResult,"AI0: %.6f Vrms",rms_ai0);
         Semaphore_post(s_critical_section); // release g_str_SendResult variable
-
-        //TODO: get amplitude and angle (of the major frequency) from fftResult
-        //      and send it over TCPIP when F command is received.
-
     }
 }
 
